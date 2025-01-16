@@ -41,14 +41,14 @@ def findDuplicates(hashList, k):
     return duplicate
 
 
-def createFolderForDuplicates(currentFolder, list):
-    os.makedirs(os.path.join(currentFolder, ), exist_ok=True)
+# def createFolderForDuplicates(currentFolder, list):
+#     os.makedirs(os.path.join(currentFolder, ), exist_ok=True)
 
-    for filePath1, filePath2 in list:
-        folderName = os.path.dirname(filePath1)
-        os.makedirs(os.path.join(currentFolder, folderName), exist_ok=True)
-        shutil.copy(filePath1, os.path.join(currentFolder, folderName))
-        shutil.copy(filePath2, os.path.join(currentFolder, folderName))
+#     for filePath1, filePath2 in list:
+#         folderName = os.path.dirname(filePath1)
+#         os.makedirs(os.path.join(currentFolder, folderName), exist_ok=True)
+#         shutil.copy(filePath1, os.path.join(currentFolder, folderName))
+#         shutil.copy(filePath2, os.path.join(currentFolder, folderName))
     
 
 def createFoldersForEachDuplicate(currentFolder, duplicates):
@@ -64,11 +64,13 @@ def main():
     print(hash)
     bySize = findDuplicates(hash, 1)
     byHash = findDuplicates(hash, 2)
+    
+    print(byHash)
 
-    if(len(bySize) > 0):
-        createFoldersForEachDuplicate(currentFolder, bySize)
-    if(len(byHash) > 0):
-        createFoldersForEachDuplicate(currentFolder, byHash)
+    # if(len(bySize) > 0):
+    #     createFoldersForEachDuplicate(currentFolder, bySize)
+    # if(len(byHash) > 0):
+    #     createFoldersForEachDuplicate(currentFolder, byHash)
     
     
 main()
