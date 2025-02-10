@@ -44,7 +44,7 @@ def findDuplicates(hashList, k):
 # def createFolderForDuplicates(currentFolder, list):
 #     os.makedirs(os.path.join(currentFolder, ), exist_ok=True)
 
-#     for filePath1, filePath2 in list:
+#        for filePath1, filePath2 in list:
 #         folderName = os.path.dirname(filePath1)
 #         os.makedirs(os.path.join(currentFolder, folderName), exist_ok=True)
 #         shutil.copy(filePath1, os.path.join(currentFolder, folderName))
